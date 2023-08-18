@@ -157,3 +157,4 @@ export const phrases = [
   },
 ];
 export const previousDialog = new PreviousDialog(phrases);
+export const previousState = new Uint8Array(32);

@@ -14,6 +14,7 @@ import {
   extension,
   generateSessionToken,
   phrases,
+  previousState,
   SCENE,
   user,
 } from '../helpers';
@@ -52,7 +53,7 @@ describe('should finish with success', () => {
       .setOnReady(onReady)
       .setOnHistoryChange(onHistoryChange)
       .setOnPhoneme(onPhoneme)
-      .setSessionContinuation({ previousDialog: phrases });
+      .setSessionContinuation({ previousState, previousDialog: phrases });
   });
 
   test('should open connection', async () => {
