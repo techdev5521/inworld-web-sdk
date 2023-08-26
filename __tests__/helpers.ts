@@ -17,6 +17,7 @@ import { QueueItem } from '../src/connection/web-socket.connection';
 import { Character } from '../src/entities/character.entity';
 import {
   DialogParticipant,
+  DialogPhrase,
   PreviousDialog,
 } from '../src/entities/continuation/previous_dialog.entity';
 import { InworldPacket, PacketId } from '../src/entities/inworld_packet.entity';
@@ -142,7 +143,7 @@ export const extension: Extension<ExtendedInworldPacket> = {
   beforeLoadScene: jest.fn((req: LoadSceneRequest) => req),
 };
 
-export const phrases = [
+export const phrases: DialogPhrase[] = [
   {
     talker: DialogParticipant.CHARACTER,
     phrase: v4(),
